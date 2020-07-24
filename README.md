@@ -1,7 +1,7 @@
 # Fake News Classification
 
 ## Data
-The Data is courtesy of Kaggle! The link to the dataset is here <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset" target = "_blank">
+The Data is courtesy of Kaggle! The link to the dataset is <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset" target = "_blank">here</a>.
   
 ## Set Up 
 1. Install the dependences in the requirements.txt file
