@@ -159,7 +159,7 @@ pipe = Pipeline([('vect', CountVectorizer()),
 
 # Fitting the model
 model = pipe.fit(X_train, y_train)
-logistic_filename = 'logistic_regression.sav'
+logistic_filename = './model/logistic_regression.sav'
 pickle.dump(model, open(logistic_filename, 'wb'))
 
 # Accuracy
@@ -178,7 +178,7 @@ pipe = Pipeline([('vect', CountVectorizer()),
                                            random_state=42))])
 # Fitting the model
 model = pipe.fit(X_train, y_train)
-DTC_filename = 'DT_classifier.sav'
+DTC_filename = './model/DT_classifier.sav'
 pickle.dump(model, open(DTC_filename, 'wb'))
 
 # Accuracy
@@ -193,7 +193,7 @@ pipe = Pipeline([('vect', CountVectorizer()),
                  ('model', RandomForestClassifier(n_estimators=50, criterion="entropy"))])
 
 model = pipe.fit(X_train, y_train)
-RTC_filename = 'RF_classifier.sav'
+RTC_filename = './model/RF_classifier.sav'
 pickle.dump(model, open(RTC_filename, 'wb'))
 
 prediction = model.predict(X_test)
