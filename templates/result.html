@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fake News Detection</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div>
+	{% if prediction == ['fake']%}
+		<div style="text-align: center; padding-top: 25%; font-size: 36px;">
+			<h5>
+				The article that says "{{ message }}" is fake!
+			</h5>
+		</div>
+	{% elif prediction == ['real']%}
+		<div style="text-align: center; padding-top: 25%; font-size: 36px;">
+			<h5>
+				The article that says {{ message }} is not fake!
+			</p>
+		</div>
+	{% endif %}
+</div>
+</body>
+</html>
